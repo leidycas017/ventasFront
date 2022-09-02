@@ -12,6 +12,16 @@
                     <input type="number" class="form-control" id="precio" name="precio"
                     [(ngModel)]="producto.precio" required>
                 </div>
+                <div class="form-group mt-3">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad"
+                    [(ngModel)]="producto.cantidad" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="idproveedor">Proveedor</label>
+                    <input type="number" class="form-control" id="idproveedor" name="idproveedor"
+                    [(ngModel)]="producto.idproveedor" required>
+                </div>
                 <div class="d-grid gap-2 mt-3">
                     <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button> 
                 </div>

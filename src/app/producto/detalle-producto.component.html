@@ -1,14 +1,20 @@
 <div class="conteiner">
     <div class="row mt-5" *ngIf = "producto">
         <div class="col-md-4 mx-auto">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 30rem;">
                 <div class="card-header text-center">
                   Detalle
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item"><b>ID: </b>{{producto.id}}</li>
+                  <li class="list-group-item"><b>Ean: </b>{{producto.ean}}</li>
+                  <li class="list-group-item"><b>Proveedor: </b>{{producto.idproveedor}}</li>
                   <li class="list-group-item"><b>Producto: </b>{{producto.nombre}}</li>
-                  <li class="list-group-item"><b>Precio: </b>$ {{producto.precio}}</li>
+                  <li class="list-group-item"><b>Cantidad: </b>{{producto.cantidad}}</li>
+                  <li class="list-group-item"><b>Valor unitario: </b>$ {{producto.precio}}</li>
+                  <li class="list-group-item"><b>Fecha y hora de ingreso: </b>{{producto.fecha}}</li>
+                  
+                  
                 </ul>
                 <div class="card-footer">
                     <div class="d-grid gap-2">

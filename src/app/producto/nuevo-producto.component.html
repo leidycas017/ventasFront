@@ -3,6 +3,11 @@
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group ">
+                    <label for="ean">Ean</label>
+                    <input type="text" class="form-control" id="ean" name="ean"
+                    [(ngModel)]="ean" required>
+                </div>
+                <div class="form-group mt-3">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre"
                     [(ngModel)]="nombre" required>
@@ -11,6 +16,16 @@
                     <label for="precio">Precio</label>
                     <input type="number" class="form-control" id="precio" name="precio"
                     [(ngModel)]="precio" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" name="cantidad"
+                    [(ngModel)]="cantidad" required>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="idproveedor">Proveedor</label>
+                    <input type="number" class="form-control" id="idproveedor" name="idproveedor"
+                    [(ngModel)]="idproveedor" required>
                 </div>
                 <div class="d-grid gap-2">
                     <button class="btn btn-outline-success mt-3" [disabled]="!f.valid">Crear</button> 
