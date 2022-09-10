@@ -10,7 +10,7 @@ import { Producto } from '../models/producto';
 
 export class ProductoService {
 
-  productoURL = 'https://ventas-l.herokuapp.com/producto';
+  productoURL = 'https://ventas-l.herokuapp.com/producto/';
 
   constructor(private httpClient: HttpClient) { }
 
