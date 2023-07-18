@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    background-color: rgb(33, 37, 41);
+}
+
+.container {
+    background-color: rgb(33, 37, 41);
+    height: 100vh;
+}

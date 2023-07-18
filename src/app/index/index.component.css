@@ -1,0 +1,20 @@
+:host {
+    display: block;
+    background-color: rgb(61, 141, 165);
+}
+
+.image-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.image-button img {
+    width: 150px;
+    height: auto;
+}
+
+.container {
+    background-color: rgb(61, 141, 165);
+    height: 100vh;
+}

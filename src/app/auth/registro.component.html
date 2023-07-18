@@ -1,0 +1,48 @@
+<app-menu></app-menu>
+
+<div class="d-flex justify-content-center">
+  <div class="logo-container mb-3">
+      <img src="assets/ea.jpg" alt="Logo de la empresa" style="width: 150px; height: auto;">
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+  <div class="card card-custom">
+    <div class="card-header">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link custom-label" routerLink="/login"><strong>Iniciar Sesión</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active custom-label" routerLink="/registro"><strong>Crear Cuenta</strong></a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="card-body">
+      <form #f="ngForm" (ngSubmit)="onRegister()" novalidate>
+        <div class="form-group mb-3">
+          <label for="nombre" class="custom-label"><strong>Nombre</strong></label>
+          <input type="text" name="nombre" id="nombre" class="form-control rounded-pill" [(ngModel)]="nombre" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="nombreUsuario" class="custom-label"><strong>Nombre de Usuario</strong></label>
+          <input type="text" name="nombreUsuario" id="nombreUsuario" class="form-control rounded-pill" [(ngModel)]="nombreUsuario"
+            required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="password" class="custom-label"><strong>Contraseña</strong></label>
+          <input type="password" name="password" id="password" class="form-control rounded-pill" [(ngModel)]="password" required>
+        </div>
+        <div class="form-group mb-3">
+          <label for="email" class="custom-label"><strong>Correo Electrónico</strong></label>
+          <input type="text" name="email" id="email" class="form-control rounded-pill" [(ngModel)]="email" required>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-outline-primary btn-block w-100 rounded-pill custom-label" [disabled]="!f.valid">
+            <strong>Crear Cuenta</strong> </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

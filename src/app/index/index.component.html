@@ -1,0 +1,14 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="jumbotron mb-4">
+        <h1 *ngIf="!nombreUsuario" class="display-6" style="margin-left: 25px;">Hello, world!</h1>
+        <h1 *ngIf="nombreUsuario" class="display-6" style="margin-left: 25px;">Hello, {{nombreUsuario}}</h1>
+      </div>
+      <div>
+        <button *ngFor="let image of images" class="image-button">
+          <img [src]="image.src" [alt]="image.alt">
+        </button>
+      </div>
+</div>
+

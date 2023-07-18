@@ -12,6 +12,7 @@ import { ProductoService } from '../service/producto.service';
 export class EditarProductoComponent implements OnInit {
 
   producto: Producto = null;
+  
 
   constructor(
     private productoService: ProductoService,
@@ -42,13 +43,12 @@ export class EditarProductoComponent implements OnInit {
         this.toastr.success('Producto Actualizado', 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/']);
+        this.router.navigate(['/lista']);
       },
       err => {
         this.toastr.error(err.error.mensaje, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        this.router.navigate(['/']);
       }
     );
   }

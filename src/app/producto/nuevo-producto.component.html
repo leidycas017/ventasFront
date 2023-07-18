@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-4 mx-auto">
@@ -24,11 +25,16 @@
                 </div>
                 <div class="form-group mt-3">
                     <label for="idproveedor">Proveedor</label>
-                    <input type="number" class="form-control" id="idproveedor" name="idproveedor"
-                    [(ngModel)]="idproveedor" required>
+                    <select class="form-control" id="proveedor" name="proveedor" [(ngModel)]="nombreProveedorSeleccionado" required>
+                        <option value="">Seleccionar proveedor</option>
+                        <option *ngFor="let proveedorItem of proveedores" [value]="proveedorItem.nombre">{{ proveedorItem.nombre }}</option>
+                    </select>                     
                 </div>
+                
+                  
+                  
                 <div class="d-grid gap-2">
-                    <button class="btn btn-outline-success mt-3" [disabled]="!f.valid">Crear</button> 
+                    <button class="btn btn-outline-primary mt-3 rounded-pill" [disabled]="!f.valid">Crear</button> 
                 </div>
             </form>
         </div>

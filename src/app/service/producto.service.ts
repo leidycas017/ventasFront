@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Producto } from '../models/producto';
+import { environment } from 'src/environments/environment.prod';
+
+
 
 
 @Injectable({
@@ -10,7 +13,7 @@ import { Producto } from '../models/producto';
 
 export class ProductoService {
 
-  productoURL = 'https://ventas-l.herokuapp.com/producto/';
+  productoURL = environment.productoURL;
 
   constructor(private httpClient: HttpClient) { }
 
